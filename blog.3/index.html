@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health, Wellness & Mental Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f9f8;
+      --text: #333;
+      --card-bg: #fff;
+      --accent: #007a5e;
+    }
+    body.dark-mode {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --card-bg: #1f1f1f;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      background: linear-gradient(to right, #9be15d, #00e3ae);
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #e0f7f1;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .toggle-mode {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .search-bar {
+      text-align: center;
+      margin: 1rem auto;
+    }
+    .search-bar input {
+      padding: 0.5rem;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .hero {
+      background: url('./assets/background.jpg') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 5px #000;
+      font-size: 2rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      margin-bottom: 1rem;
+      color: #00695c;
+    }
+    .resources, .footer {
+      background-color: #e0f7f1;
+      padding: 2rem;
+    }
+    .resources ul {
+      list-style-type: square;
+      margin-left: 2rem;
+    }
+    footer p {
+      text-align: center;
+    }
+    .blog-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .blog-post {
+      flex: 0 0 calc(30% - 1rem);
+      background: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .blog-post:hover {
+      transform: translateY(-4px);
+    }
+    .blog-post img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+    .blog-post h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .blog-post .author {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-mode" onclick="toggleMode()">Toggle Dark Mode</button>
+  <header>
+    <h1>Health, Wellness & Mental Fitness</h1>
+    <p>Empowering Your Mind and Body</p>
+  </header>
+
+  <nav>
+    <a href="#fitness">Fitness</a>
+    <a href="#nutrition">Nutrition</a>
+    <a href="#mental">Mental Health</a>
+    <a href="#stress">Stress Relief</a>
+    <a href="#resources">Resources</a>
+  </nav>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" onkeyup="searchPosts()" placeholder="Search articles...">
+  </div>
+
+  <div class="hero">Discover the Path to a Balanced and Healthy Life</div>
+
+  <section class="section blog-grid" id="blogList">
+    <div class="blog-post"><img src="./assets/Meditation-Techniques.jpg" alt><h3>How Daily Meditation Transformed My Life</h3><p class="author">Jane Wellness | June 24, 2025</p></div>
+    <div class="blog-post"><img src="./assets/sup.jpg" alt><h3>Top 10 Superfoods You Should Include</h3><p class="author">Mark Nutrition | May 20, 2025</p></div>
+    <div class="blog-post"><img src="./assets/.jpg" alt><h3>Beginner's Guide to Fitness</h3><p class="author">Coach Elina | April 5, 2025</p></div>
+    <div class="blog-post"><img src="./assets/image4.jpg" alt><h3>Yoga for Stress Relief</h3><p class="author">Anya Yoga | March 10, 2025</p></div>
+    <div class="blog-post"><img src="./assets/image5.jpg" alt><h3>Meal Planning Tips for Busy People</h3><p class="author">Nina Dietitian | Feb 28, 2025</p></div>
+    <div class="blog-post"><img src="./assets/jounrnaling.jpg" alt><h3>Power of Journaling for Mental Health</h3><p class="author">Ravi Mindset | Feb 14, 2025</p></div>
+    <div class="blog-post"><img src="./assets/evening.jpg" alt><h3>Evening Routines for Better Sleep</h3><p class="author">Dr. Rest | Jan 20, 2025</p></div>
+    <div class="blog-post"><img src="./assets/hydration.jpg" alt><h3>Hydration Hacks for Energy Boost</h3><p class="author">Water Coach | Jan 5, 2025</p></div>
+    <div class="blog-post"><img src="./assets/walking.jpg" alt><h3>How Nature Walks Reduce Anxiety</h3><p class="author">Maya Trails | Dec 22, 2024</p></div>
+    <div class="blog-post"><img src="./assets/affordable.jpg" alt><h3>Fitness on a Budget</h3><p class="author">Ram BudgetFit | Dec 5, 2024</p></div>
+    <div class="blog-post"><img src="./assets/health.jpg" alt><h3>Gut Health & Mood Connection</h3><p class="author">Dr. Flora | Nov 20, 2024</p></div>
+    <div class="blog-post"><img src="./assets/breathing.jpg" alt><h3>Mindful Breathing Techniques</h3><p class="author">Priya Zen | Nov 1, 2024</p></div>
+  </section>
+
+  <section class="resources" id="resources">
+    <h2>Wellness Resources</h2>
+    <ul>
+      <li><a href="https://calm.com" target="_blank">Calm – Meditation & Sleep App</a></li>
+      <li><a href="https://myfitnesspal.com" target="_blank">MyFitnessPal – Nutrition Tracking</a></li>
+      <li><a href="https://headspace.com" target="_blank">Headspace – Guided Meditation</a></li>
+      <li><a href="https://www.mind.org.uk/" target="_blank">Mind – Mental Health Charity</a></li>
+      <li><a href="https://precisionnutrition.com" target="_blank">Precision Nutrition Blog</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Health & Wellness Blog | Affiliate links, ebooks, and coaching sessions available.</p>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+    function searchPosts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const posts = document.querySelectorAll(".blog-post");
+      posts.forEach(post => {
+        const text = post.textContent.toLowerCase();
+        post.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

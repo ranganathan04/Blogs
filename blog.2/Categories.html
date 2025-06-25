@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartFinance Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>💸 SmartFinance Blog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resources.html">Resources</a>
+      <a href="Categories.html">Categories</a>
+      <a href="contact.html">Contact</a>
+      
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Take Charge of Your Money</h2>
+    <p>Budget better. Invest smarter. Live richer.</p>
+  </section>
+
+  
+
+  <!-- Search + Filter UI -->
+  <section style="padding: 20px; text-align: center;">
+    <input type="text" id="searchInput" placeholder="🔍 Search posts..." style="padding: 8px; width: 200px;">
+    <select id="filterSelect" style="padding: 8px; margin-left: 10px;">
+      <option value="all">All Categories</option>
+      <option value="budget">Budget</option>
+      <option value="investing">Investing</option>
+      <option value="debt">Debt</option>
+      <option value="sidehustle">Side Hustle</option>
+    </select>
+  </section>
+
+  <main class="blog-container">
+    <article class="blog-card" data-category="budget">
+      <img src="images/budget1.jpg" alt="Budgeting Tips">
+      <h3>5 Budgeting Tricks to Save More in 2025</h3>
+      <p>Learn how to make budgeting fun and effective with these simple strategies.</p>
+      <a href="post.html">Read More →</a>
+    </article>
+
+    <article class="blog-card" data-category="investing">
+      <img src="images/inversting1.jpg" alt="Investing Tips">
+      <h3>Beginner’s Guide to Investing</h3>
+      <p>Understand stocks, mutual funds, and SIPs in this beginner-friendly post.</p>
+      <a href="#">Read More →</a>
+    </article>
+
+    <article class="blog-card" data-category="debt">
+      <img src="images/dept1.jpg" alt="Debt Management">
+      <h3>How I Paid Off ₹2 Lakhs in 12 Months</h3>
+      <p>My real story of tackling student debt and gaining financial freedom.</p>
+      <a href="#">Read More →</a>
+    </article>
+
+    <article class="blog-card" data-category="sidehustle">
+      <img src="images/sidehustle1.jpg" alt="Side Hustle">
+      <h3>How to Start a Side Hustle in 2025</h3>
+      <p>Turn your passion into profit with these practical side hustle ideas.</p>
+      <a href="#">Read More →</a>
+    </article>
+
+    <article class="blog-card" data-category="investing">
+      <img src="images/finance-app.jpg" alt="Finance Apps">
+      <h3>Top 5 Apps for Personal Finance</h3>
+      <p>Track spending, plan budgets, and invest smartly with these must-have apps.</p>
+      <a href="#">Read More →</a>
+    </article>
+
+    <article class="blog-card" data-category="budget">
+      <img src="images/emergency1.jpg" alt="Emergency Fund">
+      <h3>Emergency Funds: Why and How Much</h3>
+      <p>Prepare for life's surprises by building a solid emergency fund.</p>
+      <a href="#">Read More →</a>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 SmartFinance. All rights reserved.</p>
+  </footer>
+
+  <!-- Newsletter Popup -->
+  <div id="newsletter-popup">
+    <h4>📧 Subscribe to Newsletter</h4>
+    <input type="email" placeholder="Your email">
+    <button>Subscribe</button>
+    <button id="close-popup" style="margin-top:10px; background:#ccc; color:#000;">Close</button>
+  </div>
+
+  
+</body>
+</html>
