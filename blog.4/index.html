@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote Work & Digital Nomad Lifestyle</title>
+  <style>
+    :root {
+      --bg: #f4f4f8;
+      --text: #333;
+      --card-bg: white;
+      --button-bg: #ff6347;
+    }
+    body.dark-mode {
+      --bg: #1e1e2f;
+      --text: #f0f0f0;
+      --card-bg: #2c2c3a;
+      --button-bg: #ff9563;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.4s, color 0.4s;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: var(--button-bg);
+      color: white;
+      background-color: black;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
+    }
+    .hero {
+      background: url('./assest/back-ground1.jpg') center/cover no-repeat;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease;
+    }
+    .cta {
+      background: var(--button-bg);
+      color: rgb(0, 0, 0);
+      background-color: bisque;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .cta:hover {
+      background:yellow;
+    }
+    .blog-section, .categories, .newsletter, .monetize {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    .blog-grid, .affiliate-grid, .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .blog-card, .affiliate-card, .category-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, background 0.3s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .blog-card:hover, .affiliate-card:hover, .category-card:hover {
+      transform: translateY(-5px);
+      cursor:pointer;
+    }
+    .blog-card img, .category-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .blog-card h3, .affiliate-card h3, .category-card h3 {
+      margin: 15px 0 10px;
+    }
+    .newsletter form {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+    .affiliate-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #007BFF;
+      color: white;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .search-bar {
+      margin: 20px auto;
+      max-width: 400px;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Remote Work & Digital Nomad Lifestyle</h1>
+      <p>Explore tools, productivity hacks, travel tips, and career paths for the digital nomad world.</p>
+      <a href="#blogs" class="cta">Explore Blogs</a>
+    </div>
+  </header>
+
+  <!-- blog section with id for filtering -->
+  <section class="blog-section" id="blogs">
+    <h2>Featured Articles</h2>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search blog posts...">
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <img src="./assest/blog1.jpg" alt="Remote Tools">
+        <h3>Top 10 Tools for Remote Work</h3>
+        <p>Boost productivity with these essential remote working tools.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="blog-card">
+        <img src="./assest/blog2.jpg" alt="Productivity Hacks">
+        <h3>Productivity Hacks for Freelancers</h3>
+        <p>Smart ways to work less and achieve more.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="blog-card">
+        <img src="./assest/blog3.jpg" alt="Nomad Travel">
+        <h3>Top Cities for Digital Nomads</h3>
+        <p>Discover the best places to live and work remotely in 2025.</p>
+        <a href="#">Read More →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <h2>Categories</h2>
+    <div class="category-grid">
+      <a href="#blogs" class="category-card"><img src="./assest/c1.jpg" alt="Remote Tools"><h3>Remote Tools</h3><p>Find the best software for remote collaboration and task management.</p></a>
+      <a href="#blogs" class="category-card"><img src="./assest/c2.jpg" alt="Productivity"><h3>Productivity</h3><p>Learn to optimize your daily workflow and eliminate distractions.</p></a>
+      <a href="#blogs" class="category-card"><img src="./assest/c3.jpg" alt="Nomad Travel"><h3>Nomad Travel</h3><p>Explore destinations and tips for traveling while working remotely.</p></a>
+      <a href="#blogs" class="category-card"><img src="./assest/c4.jpg" alt="Freelancing"><h3>Freelancing</h3><p>Build a sustainable and fulfilling freelance career from anywhere.</p></a>
+      <a href="#blogs" class="category-card"><img src="./assest/c5,jpg" alt="Career Paths"><h3>Career Paths</h3><p>Discover remote career opportunities and professional growth tips.</p></a>
+      <a href="#blogs" class="category-card"><img src="./assest/c6.jpg" alt="Work–Life Balance"><h3>Work–Life Balance</h3><p>Maintain mental wellness and avoid burnout while working remotely.</p></a>
+      <a href="#blogs" class="category-card"><img src="./assest/c7.jpg" alt="Virtual Meetings"><h3>Virtual Meetings</h3><p>Master remote communication and virtual presentation skills.</p></a>
+      <a href="#blogs" class="category-card"><img src="./assest/c8.jpg" alt="Digital Security"><h3>Digital Security</h3><p>Stay safe online with essential tools and security practices.</p></a>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get updates on the latest content, guides, and deals!</p>
+    <form>
+      <input type="email" placeholder="Your Email Address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <section class="monetize">
+    <h2>Recommended Tools & Courses</h2>
+    <div class="affiliate-grid">
+      <div class="affiliate-card">
+        <h3>Notion for Remote Teams</h3>
+        <p>Organize your work and boost team productivity.</p>
+        <a href="https://www.notion.com/remote" class="affiliate-btn" target="_blank">Try Notion →</a>
+      </div>
+      <div class="affiliate-card">
+        <h3>Freelance Career Course</h3>
+        <p>Launch your remote freelance career with expert guidance.</p>
+        <a href="https://www.udemy.com/topic/freelancing/?srsltid=AfmBOoon7bQwckebv7v7Yn_B8WtJLLKNDb9MNf4llUl6rIqHwcshGKj4" class="affiliate-btn" target="_blank">Enroll Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 RemoteNomadLife | Built with ❤️ for digital explorers</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('.newsletter form');
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const email = form.querySelector('input').value;
+        if (email) {
+          alert(`Thanks for subscribing, ${email}!`);
+          form.reset();
+        }
+      });
+
+      const toggleBtn = document.createElement('button');
+      toggleBtn.textContent = 'Toggle Dark Mode';
+      toggleBtn.className = 'dark-toggle';
+      document.body.appendChild(toggleBtn);
+      toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+
+      const searchInput = document.querySelector('#search');
+      const blogCards = document.querySelectorAll('.blog-card');
+      if (searchInput) {
+        searchInput.addEventListener('input', () => {
+          const term = searchInput.value.toLowerCase();
+          blogCards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            card.style.display = text.includes(term) ? '' : 'none';
+          });
+        });
+      }
+
+      const categoryCards = document.querySelectorAll('.category-card');
+      categoryCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+          const selectedCategory = card.querySelector('h3').textContent.toLowerCase();
+          blogCards.forEach(blog => {
+            const text = blog.textContent.toLowerCase();
+            blog.style.display = text.includes(selectedCategory) ? '' : 'none';
+          });
+          window.scrollTo({ top: document.querySelector('.blog-section').offsetTop - 50, behavior: 'smooth' });
+        });
+      });
+
+      const elements = document.querySelectorAll('.blog-card, .category-card, .affiliate-card');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      elements.forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
